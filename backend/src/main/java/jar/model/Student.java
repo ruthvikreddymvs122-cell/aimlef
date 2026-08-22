@@ -13,11 +13,11 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-    String name;
+    private long id;
+    private String name;
     @Column(unique = true)
-    String email;
-    String ip;
+    private String email;
+    private String ip;
 
     public String getName() {
         return name;
@@ -26,6 +26,12 @@ public class Student {
 
     public void setName(String n) {
         this.name = n;
+    }
+     public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getEmail() {
